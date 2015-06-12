@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Practice</title>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script><!-- load angular -->
+    <script type="text/javascript" src="app.js"></script>
+
+</head>
+<body>
+
+    <div ng-controller="MyCtrl">
+        Name Header:
+        <select ng-model="nameHeader" ng-options="header for header in uploadedFile.headers">
+            <option value="">{{uploadedFile.headers[uploadedFile.nameColumn]}}</option>
+        </select><br>
+
+        Lat Header:
+        <select ng-model="latHeader" ng-options="header for header in uploadedFile.headers">
+            <option value="">{{uploadedFile.headers[uploadedFile.latColumn]}}</option>
+        </select><br>
+
+        Long Header:
+        <select ng-model="longHeader" ng-options="header for header in uploadedFile.headers">
+            <option value="">{{uploadedFile.headers[uploadedFile.lngColumn]}}</option>
+        </select><br>
+    </div>
+
+
+</body>
+</html>
+
