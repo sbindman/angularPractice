@@ -16,19 +16,21 @@
 
     <div ng-controller="MyCtrl">
         Name Header:
-        <select ng-model="nameHeader" ng-options="header for header in uploadedFile.headers">
-            <option value="">{{uploadedFile.headers[uploadedFile.nameColumn]}}</option>
-        </select><br>
+        <select ng-model="nameName">
+            <option ng-repeat="item in uploadedFile.headers">{{item}}</option>
+        </select>Selected Header: {{nameName}}<br>
 
         Lat Header:
-        <select ng-model="latHeader" ng-options="header for header in uploadedFile.headers">
-            <option value="">{{uploadedFile.headers[uploadedFile.latColumn]}}</option>
-        </select><br>
+        <select ng-model="latName">
+            <option ng-repeat="item in uploadedFile.headers">{{item}}</option>
+        </select>Selected Header: {{latName}}<br>
 
         Long Header:
-        <select ng-model="longHeader" ng-options="header for header in uploadedFile.headers">
-            <option value="">{{uploadedFile.headers[uploadedFile.lngColumn]}}</option>
-        </select><br>
+        <select ng-model="longName">
+            <option ng-repeat="item in uploadedFile.headers">{{item}}</option>
+        </select>Selected Header: {{longName}}<br>
+
+
     </div>
 
 
